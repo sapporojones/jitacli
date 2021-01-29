@@ -6,6 +6,9 @@ authors = ["sapporojones <sapporojones@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+requests = "^2.25.1"
+tqdm = "^4.56.0"
+rich = "^9.10.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

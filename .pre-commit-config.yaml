@@ -10,13 +10,13 @@ repos:
       - id: check-yaml
       - id: end-of-file-fixer
 
-  # - repo: local
-  #   hooks:
-  #     - id: pyupgrade
-  #       name: pyupgrade
-  #       entry: poetry run pyupgrade --py37-plus
-  #       types: [python]
-  #       language: system
+  - repo: local
+    hooks:
+      - id: pyupgrade
+        name: pyupgrade
+        entry: poetry run pyupgrade --py37-plus
+        types: [python]
+        language: system
 
   # - repo: local
   #   hooks:
