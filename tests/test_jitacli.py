@@ -2,15 +2,19 @@
 # CCP's myriad ESI endpoints
 import requests
 from os import system, name
+
 # import regex
 import re
 import pickle
 from concurrent.futures import ThreadPoolExecutor
+
 # importing tqdm because for loops are slow and we want
 # to show progress to the user in some way
 from tqdm import tqdm
+
 # importing rich for output prettification
 from rich.console import Console
+
 c = Console()
 # import rich
 from rich.traceback import install
@@ -19,7 +23,6 @@ from esipy import EsiClient
 import pandas as pd
 from time import sleep
 import jitacli.main as j
-
 
 
 client = EsiClient(
@@ -49,11 +52,12 @@ def test_get_itemvalue():
     x = j.get_itemvalue(item_id, quantity, item_name)
     assert x > 0
 
+
 def test_q_list():
     cleaned_item_list = []
     swap_list = []
     quant_list_rdy = []
-    itemlist = ["Kronos","Null L x2820"]
+    itemlist = ["Kronos", "Null L x2820"]
 
     """
     I need a third list for parsed quantities it turns out

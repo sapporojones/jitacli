@@ -2,15 +2,19 @@
 # CCP's myriad ESI endpoints
 import requests
 from os import system, name
+
 # import regex
 import re
 import pickle
 from concurrent.futures import ThreadPoolExecutor
+
 # importing tqdm because for loops are slow and we want
 # to show progress to the user in some way
 from tqdm import tqdm
+
 # importing rich for output prettification
 from rich.console import Console
+
 c = Console()
 # import rich
 from rich.traceback import install
@@ -48,6 +52,7 @@ def clear_screen():
     # for mac and linux(here, os.name is 'posix')
     else:
         _ = system("clear")
+
 
 # never know, one day you may need to translate some ids to names...
 # def get_name(item_id):
